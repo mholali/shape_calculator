@@ -57,26 +57,27 @@ class Square(Rectangle):
         Rectangle.set_height(self, height)      # reassigns the Rectangle class' old height variable to a new one. this new side value will be used in all subsequent methods
                                                 # height variable has been inherited from Rectangle class. self argument required because we are calling the Rectangle class.
 
+###### WORKING TEST BENCH AREA ######
+if __name__ == '__main__':
+    rect = Rectangle(10, 5)
+    print(rect.get_area())
+    rect.set_height(3)
+    print(rect.get_perimeter())
+    print(rect)
+    rect.get_picture()
 
-rect = Rectangle(10, 5)
-print(rect.get_area())
-rect.set_height(3)
-print(rect.get_perimeter())
-print(rect)
-rect.get_picture()
+    sq = Square(9)
+    print(sq.get_area())
+    sq.set_side(4)
+    print(sq.get_diagonal())
+    print(sq)
+    sq.get_picture()
 
-sq = Square(9)
-print(sq.get_area())
-sq.set_side(4)
-print(sq.get_diagonal())
-print(sq)
-sq.get_picture()
+    rect.set_height(8)
+    rect.set_width(16)
+    print(rect.get_amount_inside(sq))
 
-rect.set_height(8)
-rect.set_width(16)
-print(rect.get_amount_inside(sq))
-
-r1 = Rectangle(10, 6)
-r2 = Rectangle(5, 3)
-print(r1.get_amount_inside(r2))
+    r1 = Rectangle(10, 6)
+    r2 = Rectangle(5, 3)
+    print(r1.get_amount_inside(r2))
 
